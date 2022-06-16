@@ -395,21 +395,19 @@ let teacher = mongoose.model("Teacher", markSchema);
 //Obtén los nombres de los alumnos y la cantidad total de asignaturas por alumno cuyo profesor----------------------------------------
 // sea uno que elijáis.
 
-marks
-.aggregate([
-            {$unwind: "$teachers"},
-            {$match: {teacher_first_name: "Mariana"}},
-            {$project: {"Nombre": "$student_first_name", 
-                        "Asignatura":"$subject_name",
-                        "Cantidad": {"$sum": 1},
-                        _id: 0}},
- ])
+// marks
+// .aggregate([
+//             {$unwind: "$teachers"},
+//             {$match: {"teachers.teacher_first_name": "Mariana"}},
+//             {$group: {"_id": "$student_first_name", 
+//                         "Cantidad": {"$sum": 1}}},
+//  ])
 
-.then((result) =>
-{
-    console.log(result);
-})
-.catch((error) =>
-{
-    console.log(error);
-})
+// .then((result) =>
+// {
+//     console.log(result);
+// })
+// .catch((error) =>
+// {
+//     console.log(error);
+// })
