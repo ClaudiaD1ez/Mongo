@@ -8,35 +8,35 @@ function getStart(request, response)
 
 // -----------------------------------------------------------------------------------------------
 
-function getPhotos(request, response)
-{
-    if(request.query.id == null)
-    {
-        PhotoModel.find({})
-        .then( (photo) =>
-        {
-            console.log(photo);
-            response.send(photo)
-        })
-        .catch( (err) =>
-        {
-            console.log(err);
-        })
-    }
-    else
-    {
-        PhotoModel.findById(request.query.id)
-        .then( (photo) => 
-        {
-            console.log(photo)
-            response.send(photo)
-        })
-        .catch( (err) =>
-        {
-            console.log(err)
-        })
-    }
-}
+// function getPhotos(request, response)
+// {
+//     if(request.query.id == null)
+//     {
+//         PhotoModel.find({})
+//         .then( (photo) =>
+//         {
+//             console.log(photo);
+//             response.send(photo)
+//         })
+//         .catch( (err) =>
+//         {
+//             console.log(err);
+//         })
+//     }
+//     else
+//     {
+//         PhotoModel.findById(request.query.id)
+//         .then( (photo) => 
+//         {
+//             console.log(photo)
+//             response.send(photo)
+//         })
+//         .catch( (err) =>
+//         {
+//             console.log(err)
+//         })
+//     }
+// }
 
 // --------------------------------------------------------------------------------------------------------------
 
