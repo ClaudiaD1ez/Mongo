@@ -1,18 +1,18 @@
-const {Router} = require("express")
-const photosCtrl = require("../controller/photos.controller");
+const {Router} = require ("express")
+const router = Router(); // crear un objeto de la clase Router
+const photoCtrl = require("../controller/photo.controller") // importamos los controllers ( antes tenemos que exportar en la carpeta controllers)
 
-const router = Router();
+router.get("/photos", photoCtrl.getPhoto);
 
-router.get("/photos", photosCtrl.getPhotos);
+router.get("/photos/dueno", photoCtrl.getPhoto);
 
-router.post("/photos", photosCtrl.postPhotos);
+router.post("/photos", photoCtrl.postPhoto);
 
-router.put("/photos", photosCtrl.putPhotos);
+// router.put("/photos/name/descripcion", photoCtrl.putPhoto);
+router.put("/photos", photoCtrl.putPhoto);
 
-router.delete("/photos", photosCtrl.deletePhotos);
 
-router.get("/", photosCtrl.getStart);
-
+router.delete("/photos", photoCtrl.deletePhoto);
 
 
 module.exports = router
