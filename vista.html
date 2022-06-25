@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- --------js-------- -->
+    <script src="vista.Profesional.js"></script>
+    <script src="vista.Movie.js"></script>
+    <!-- ----------- css -------- -->
+    <link rel="stylesheet" href="./vista.css">
+
+    <title>IMDB</title>
+
+</head>
+<body>
+
+    <!----------------------------- NAV BAR ------------------------------->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-danger">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">IMDB</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#" onclick="mostrarProfesionales()">Profesionales</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" onclick="mostrarMovies()">Peliculas</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!----------------- FORM Profesionales -------------------------->
+    <div class="general">
+
+        <div class="izq">
+            <form class="form1" id="profesionales">
+                <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Edad</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Genero</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Nacionalidad</label>
+                <input type="text" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Peso</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Altura</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <button type="submit" class="btn btn-primary">Mostrar</button>
+                <button type="submit" class="btn btn-primary">Crear</button>
+                <button type="submit" class="btn btn-primary">Actualizar</button>
+                <button type="submit" class="btn btn-primary">Borrar</button>
+
+            </form>
+
+            <form class="form1" id="movies">
+                <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Titulo</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Año</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Actores</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Nacionalidad</label>
+                <input type="text" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Directores</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Guionistas</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <button type="submit" class="btn btn-primary">Mostrar</button>
+                <button type="submit" class="btn btn-primary">Crear</button>
+                <button type="submit" class="btn btn-primary">Actualizar</button>
+                <button type="submit" class="btn btn-primary">Borrar</button>
+
+            </form>
+        </div>
+        <div class="drch">
+
+        </div>
+
+
+    </div>
+    
+</body>
+</html>

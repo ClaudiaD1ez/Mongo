@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.general{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center;
+    background-image: url(https://static.eldiario.es/clip/86011034-d175-42e9-b127-e1553dc2325f_16-9-aspect-ratio_default_0.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.izq{
+    width: 40%;
+    /* height: 80%; */
+    padding: 1%;
+    border: 2px solid white;
+    background-color: rgba(0, 0, 0, 0.664);
+    color: white;
+}
+
+.drch{
+    width: 40%;
+    /* height: 80%; */
+    padding: 2%;
+    border: 2px solid white;
+    background-color: rgba(0, 0, 0, 0.664);
+    color: white
+}
+.form1{
+    height: fit-content;
+}
+#movies{
+    display: none;
+}
+/* #profesionales{
+    display: none;
+} */
