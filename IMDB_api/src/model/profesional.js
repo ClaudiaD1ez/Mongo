@@ -2,7 +2,7 @@ const {Schema, model} = require("mongoose");
 const mongoose = require('mongoose')
 
 
-const profesionalSchema = new mongoose.Schema(
+const ProfesionalSchema = new mongoose.Schema(
     {
         name: String,
         age: String,
@@ -13,4 +13,4 @@ const profesionalSchema = new mongoose.Schema(
     }
 )
 
-module.exports = model("profesionales", profesionalSchema);
+module.exports = model("Profesionales", ProfesionalSchema,"profesionales");

@@ -3,19 +3,18 @@ const Movie = require("../model/movies")
 const Profesional = require("../model/profesional")
 const connection = require ("../database")
 const mongoose = require('mongoose')
-const profesional = require("../model/profesional")
 
-function getStart(request, response)
-{
-    let respuesta = {error:true, codigo:200, mensaje: 'Punto de inicio'};
-    response.send(respuesta);
-}
+// function getStart(request, response)
+// {
+//     let respuesta = {error:true, codigo:200, mensaje: 'Punto de inicio'};
+//     response.send(respuesta);
+// }
 
 // ----------------------------------------------------------------------------
 
 function getProf(request,response){
 
-    if (request.params.id == null){
+    if (request.query.id == null){
 
         Profesional.find({})
         .then( (result) =>
@@ -31,7 +30,7 @@ function getProf(request,response){
     }
     else
     {
-        Profesional.findById(request.params.id)
+        Profesional.findById(request.query.id)
         .then( (result) =>
         {
 
@@ -47,27 +46,82 @@ function getProf(request,response){
 
 //-----------------------------------------------------------------------------------------
 
-function postProfesional(request,response){
+function postProfesional(request,response)
+{
+    console.log(request.body);
 
-    let name = request.body.name;
-    let age = request.body.age;
-    let genre = request.body.genre;
-    let nationality = request.body.nationality;
-    let weight = request.body.weight;
-    let height = request.body.height;
-
-    console.log(name);
-
-    let profesional2 = new profesional(name, age, genre, nationality, weight, height);
-
-    profesional2.save()
-    .then((result) => 
+    let profesional = new Profesional({
+                                    name: request.body.name,
+                                    age:request.body.age,
+                                    genre:request.body.genre,
+                                    nationality: request.body.nationality,
+                                    weight: request.body.weight,
+                                    height: request.body.height,
+                             })
+    console.log(profesional)
+    
+    profesional.save()
+    .then( (profesional) =>
     {
-        console.log("profesional guardado");
-        return profesor2.save()
+        console.log("Profesional guardado correctamente");
+        console.log(profesional);
+        response.send(profesional)
     })
-
+    .catch( (error) =>
+    {
+        console.log(error)
+    })
 }
 
+// -------------------------------------------------------------------------------------------------
 
-module.exports = {getProf, postProfesional}
+function putProfesional(request,response){
+
+    if(request.query._id != null){
+
+    Profesional.updateOne({$match:{_id:request.query._id}},{$set:
+                          {name:request.body.name,
+                          age:request.body.age,
+                          genre:request.body.genre,
+                          nationality:request.body.nationality,
+                          weight:request.body.weight,
+                          height:request.body.height}})
+
+
+    .then( (profesional) =>
+    {
+        console.log("Profesional actualizada correctamente");
+        console.log(profesional);
+        response.send(profesional)
+    })
+    .catch( (error) =>
+    {
+        console.log(error)
+    })
+}}
+
+// ----------------------------------------------------------------------------------------------------------
+
+function deleteProfesional(request,response){
+
+    if (request.query._id != null){
+ 
+        console.log("HOLA")
+        
+        Profesional.deleteOne({_id:request.query._id})
+        .then( (profesional) =>
+        {
+            console.log(profesional);
+            response.send(profesional)
+        })
+        .catch( (err) =>
+        {
+            console.log(err);
+            process.exit(-1)
+        })
+    }
+
+    }
+
+
+module.exports = {getProf, postProfesional,putProfesional,deleteProfesional}

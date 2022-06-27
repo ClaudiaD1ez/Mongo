@@ -44,69 +44,79 @@
         <div class="izq">
             <form class="form1" id="profesionales">
                 <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Nombre</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <label for="exampleInputEmail1" class="form-label" >Id</label>
+                    <input type="text" class="form-control" id="_id" aria-describedby="emailHelp">
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Edad</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <label for="exampleInputEmail1" class="form-label" >Nombre</label>
+                    <input type="text" class="form-control" id="nombre" aria-describedby="emailHelp">
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Genero</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <label for="exampleInputEmail1" class="form-label" >Edad</label>
+                    <input type="text" class="form-control" id="edad" aria-describedby="emailHelp">
                 </div>
                 <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Nacionalidad</label>
-                <input type="text" class="form-control" id="exampleInputPassword1">
+                    <label for="exampleInputEmail1" class="form-label" >Genero</label>
+                    <input type="text" class="form-control" id="genero" aria-describedby="emailHelp">
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Peso</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <label for="exampleInputPassword1" class="form-label" >Nacionalidad</label>
+                <input type="text" class="form-control" id="nacionalidad">
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Altura</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <label for="exampleInputEmail1" class="form-label" >Peso</label>
+                    <input type="text" class="form-control" id="peso" aria-describedby="emailHelp">
                 </div>
-                <button type="submit" class="btn btn-primary">Mostrar</button>
-                <button type="submit" class="btn btn-primary">Crear</button>
-                <button type="submit" class="btn btn-primary">Actualizar</button>
-                <button type="submit" class="btn btn-primary">Borrar</button>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label" >Altura</label>
+                    <input type="text" class="form-control" id="altura" aria-describedby="emailHelp">
+                </div>
+                <button type="submit" class="btn btn-primary" onclick="mostrarProf()" >Mostrar</button>
+                <button type="submit" class="btn btn-primary" onclick="crearProf()" >Crear</button>
+                <button type="submit" class="btn btn-primary" onclick="actualizarProf()">Actualizar</button>
+                <button type="submit" class="btn btn-primary" onclick="borrarProf()">Borrar</button>
 
             </form>
+
+      <!----------------- FORM Peliculas -------------------------->
 
             <form class="form1" id="movies">
                 <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Titulo</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <label for="exampleInputEmail1" class="form-label" >Id</label>
+                    <input type="text" class="form-control" id="_idd" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Titulo</label>
+                    <input type="text" class="form-control" id="titulo" aria-describedby="emailHelp">
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Año</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <input type="text" class="form-control" id="año" aria-describedby="emailHelp">
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Actores</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <input type="text" class="form-control" id="actores" aria-describedby="emailHelp">
                 </div>
                 <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Nacionalidad</label>
-                <input type="text" class="form-control" id="exampleInputPassword1">
+                <input type="text" class="form-control" id="nacionalidad">
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Directores</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <input type="text" class="form-control" id="directores" aria-describedby="emailHelp">
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Guionistas</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <input type="text" class="form-control" id="guionistas" aria-describedby="emailHelp">
                 </div>
-                <button type="submit" class="btn btn-primary">Mostrar</button>
-                <button type="submit" class="btn btn-primary">Crear</button>
-                <button type="submit" class="btn btn-primary">Actualizar</button>
-                <button type="submit" class="btn btn-primary">Borrar</button>
+                <button type="submit" class="btn btn-primary" onclick="getMovies()">Mostrar</button>
+                <button type="submit" class="btn btn-primary" onclick="postMovies()">Crear</button>
+                <button type="submit" class="btn btn-primary" onclick="actualizarMovie()">Actualizar</button>
+                <button type="submit" class="btn btn-primary" onclick="borrarMovie()">Borrar</button>
 
             </form>
         </div>
-        <div class="drch">
+        <div class="drch" id="mostrar">
 
         </div>
 

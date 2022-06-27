@@ -5,13 +5,15 @@ const profesionalesCtrl = require("../controller/profesionales.controller");
 
 router.get("/Profesional", profesionalesCtrl.getProf);
 
-router.get("/Profesional/:id", profesionalesCtrl.getProf);
+
+// router.get("/Profesional?_id=", profesionalesCtrl.getProf);
 
 router.post("/Profesional", profesionalesCtrl.postProfesional);
 
-// router.put("/Profesional/", profesionalesCtrl.putProfesional);
+router.put("/Profesional/", profesionalesCtrl.putProfesional);
 
-// router.delete("/Profesional", profesionalesCtrl.deleteProfesional);
+router.delete("/Profesional", profesionalesCtrl.deleteProfesional);
+
 
 
 module.exports = router
